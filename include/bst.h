@@ -92,4 +92,5 @@ public:
     void getElements(std::vector<std::pair<T, int>>& vec) const {
         inOrderCollect(root, vec);
     }
+};
 #endif  // INCLUDE_BST_H_
