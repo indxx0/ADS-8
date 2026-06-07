@@ -49,7 +49,7 @@ void makeTree(BST<std::string>& tree, const char* filename) {
 
 void printFreq(BST<std::string>& tree) {
     std::vector<std::pair<std::string, int>> words;
-    
+
     tree.getElements(words);
 
     std::sort(words.begin(), words.end(), [](const auto& a, const auto& b) {
@@ -67,6 +67,6 @@ void printFreq(BST<std::string>& tree) {
             outFile << pair.first << " " << pair.second << "\n";
         }
     }
-    
+
     if (outFile) outFile.close();
 }
