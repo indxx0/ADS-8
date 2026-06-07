@@ -3,6 +3,8 @@
 #include  <fstream>
 #include  <locale>
 #include  <cstdlib>
+#include <vector>
+#include <algorithm>
 #include  "bst.h"
 
 bool isLatinLetter(int ch) {
