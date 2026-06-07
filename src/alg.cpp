@@ -5,6 +5,7 @@
 #include  <cstdlib>
 #include <vector>
 #include <algorithm>
+#include <string>
 #include  "bst.h"
 
 bool isLatinLetter(int ch) {
