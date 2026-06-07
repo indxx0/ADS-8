@@ -76,17 +76,18 @@ public:
     }
 
     int depth() const {
-        return getDepth(root);
+        int d = getDepth(root);
+        return d > 0 ? d - 1 : 0;
     }
 
-    bool search(T value) const {
+    int search(T value) const {
         Node* curr = root;
         while (curr) {
-            if (value == curr->value) return true;
+            if (value == curr->value) return curr->count;
             else if (value < curr->value) curr = curr->left;
             else curr = curr->right;
         }
-        return false;
+        return 0;
     }
 
     void getElements(std::vector<std::pair<T, int>>& vec) const {
