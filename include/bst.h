@@ -6,16 +6,16 @@
 
 template <typename T>
 class BST {
-public:
+ public:
     struct Node {
         T value;
         int count;
         Node* left;
         Node* right;
-        Node(T val) : value(val), count(1), left(nullptr), right(nullptr) {}
+        explicit Node(T val) : value(val), count(1), left(nullptr), right(nullptr) {}
     };
 
-private:
+ private:
     Node* root;
 
     void destroy(Node* node) {
@@ -40,9 +40,9 @@ private:
         inOrderCollect(node->right, vec);
     }
 
-public:
+ public:
     BST() : root(nullptr) {}
-    
+
     ~BST() {
         destroy(root);
     }
